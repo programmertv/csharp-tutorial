@@ -8,6 +8,7 @@ namespace GettingStarted.App
         {
             Console.WriteLine("Hello Pro Grammer TV!");
             Console.WriteLine("Test commit");
+            Console.WriteLine("Last line");
         }
     }
 }
