@@ -6,6 +6,8 @@ namespace Episode1VariableAndDataType
     {
         static void Main(string[] args)
         {
+            #region -- Principles Demo --
+
             //With or Without variable
             WalangVariable();
             MayroongVariable();
@@ -15,18 +17,14 @@ namespace Episode1VariableAndDataType
             SimpleNoDAMPAndDAMP();
             SimpleWETAndDRY();
 
-            //syntax: <datatype> <variable1,varibale2,variable3...variableN>
-            int m1 = 2, m2 = 4, m3; //Multiple
+            #endregion
 
-            //single per line
-            int s1 = 2;
-            int s2 = 4;
-            int s3;
+            #region -- Stack & Heap Demo --
 
             //Variable and Data Type
             int num1 = 100; // explicit typed
             var num2 = 500; //implicity typed
-            var num3 = num1; 
+            var num3 = num1;
             num3 = 9000;
             var class1 = new DemoClass()
             {
@@ -38,10 +36,34 @@ namespace Episode1VariableAndDataType
             };
             var class3 = class1;
             class3.Value = 9000;
+            Console.WriteLine($"class1 Value: {class1.Value}");
 
+            #endregion
+
+            #region -- Variable Decleration Demo --
+
+            //syntax: <datatype> <variable1,varibale2,variable3...variableN>
+            int m1, m2, m3; //Multiple
+
+            //single per line
+            int s1 = 1;
+            int s2;
+            int s3;
+
+            //Decleration of variable demo
+
+            short shortA = 1;
+            int intA = 1;
+            long longA = 1;
+
+            intA = shortA;
+            longA = intA;
+
+            var intAndLong = intA + longA;
 
             bool trueVal = true;
             bool falseVal = false;
+
             char charA = 'A';
             string nullString;
             string stringWithValue = "test";
@@ -53,15 +75,7 @@ namespace Episode1VariableAndDataType
 
             decimal decimalA = 1.2M;
 
-            short shortA = 1;
-            int intA = 1;
-            long longA = 1;
-
-            intA = shortA;
-            longA = intA;
-
-            var intAndLong = intA + longA;
-
+            #endregion
         }
 
         #region -- Without Variable --
@@ -111,6 +125,8 @@ namespace Episode1VariableAndDataType
         }
 
         #endregion
+
+        #region -- Principles Demo Functions --
 
         static void SimpleNoKISSAndKISS()
         {
@@ -178,12 +194,17 @@ namespace Episode1VariableAndDataType
             }
         }
 
+        #endregion
+
+        #region -- Utils --
 
         //Utils
         static void PrintSeparator()
         {
             Console.WriteLine("*******************************");
         }
+
+        #endregion
     }
 
     #region -- Test Class (class will be discuss separately) --
