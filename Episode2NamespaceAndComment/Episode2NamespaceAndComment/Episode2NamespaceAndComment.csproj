@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fruits\" />
+    <None Remove="Heroes\" />
+    <None Remove="Heroes\Pinoy\" />
+    <None Remove="Heroes\MobileLegend\" />
+    <None Remove="Heroes\Pinoy\Tagalog\" />
+    <None Remove="Heroes\Pinoy\Bisaya\" />
+    <None Remove="Heroes\MobileLegend\Assasins\" />
+    <None Remove="Heroes\MobileLegend\Mages\" />
+    <None Remove="Heroes\MobileLegend\Fighters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fruits\" />
+    <Folder Include="Heroes\" />
+    <Folder Include="Heroes\Pinoy\" />
+    <Folder Include="Heroes\MobileLegend\" />
+    <Folder Include="Heroes\Pinoy\Tagalog\" />
+    <Folder Include="Heroes\Pinoy\Bisaya\" />
+    <Folder Include="Heroes\MobileLegend\Assasins\" />
+    <Folder Include="Heroes\MobileLegend\Mages\" />
+    <Folder Include="Heroes\MobileLegend\Fighters\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Episode2NamespaceAndComment", "Episode2NamespaceAndComment\Episode2NamespaceAndComment.csproj", "{8B64EE6B-7B4B-4AA1-A605-98012B361FF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B64EE6B-7B4B-4AA1-A605-98012B361FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B64EE6B-7B4B-4AA1-A605-98012B361FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B64EE6B-7B4B-4AA1-A605-98012B361FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B64EE6B-7B4B-4AA1-A605-98012B361FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC75B115-29D3-4EA4-A39B-EF2C53A55E78}
+	EndGlobalSection
+EndGlobal
