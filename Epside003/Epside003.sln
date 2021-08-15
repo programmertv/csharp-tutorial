@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epside003", "Epside003\Epside003.csproj", "{B01A4F3C-FB52-4EE7-A7A0-7119D8C55741}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B01A4F3C-FB52-4EE7-A7A0-7119D8C55741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01A4F3C-FB52-4EE7-A7A0-7119D8C55741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01A4F3C-FB52-4EE7-A7A0-7119D8C55741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01A4F3C-FB52-4EE7-A7A0-7119D8C55741}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {925B2BE9-49F9-4C3B-9C31-DE2ED429A395}
+	EndGlobalSection
+EndGlobal
