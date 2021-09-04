@@ -248,10 +248,7 @@ namespace Episode007
             #endregion
 
             #region -- Enumeration (enum) --
-
-            #region -- Normal Enum --
-
-            /*
+            
             var boyGender = Gender.Male;
             Console.WriteLine($"gender: {boyGender}, gender value: {(int)boyGender}");
             switch (boyGender)
@@ -272,29 +269,8 @@ namespace Episode007
             Gender genderFromString = (Gender)Enum.Parse(typeof(Gender), stringValue);
             Console.WriteLine($"gender from int: {genderFromValue}");
             Console.WriteLine($"gender from String: {genderFromString}");
-            */
+            
 
-
-            #endregion
-
-            var sampleOwndedGadet = OwnedGadget.Laptop | OwnedGadget.Phone | OwnedGadget.Camera;
-            if(sampleOwndedGadet == OwnedGadget.Phone || sampleOwndedGadet == OwnedGadget.Camera)
-            {
-                Console.WriteLine("Owned a phone or camera");
-            }
-            else
-            {
-                Console.WriteLine("[NOT] Owned a phone or camera");
-            }
-
-            if (sampleOwndedGadet.HasFlag(OwnedGadget.Laptop))
-                Console.WriteLine("Owned a laptop");
-
-            if (sampleOwndedGadet.HasFlag(OwnedGadget.Laptop | OwnedGadget.Camera))
-                Console.WriteLine("Owned a laptop or camera");
-
-            if (sampleOwndedGadet.HasFlag(OwnedGadget.Camera))
-                Console.WriteLine("Owned a camera");
 
             #endregion
         }
@@ -325,15 +301,4 @@ namespace Episode007
     }
 
     #endregion
-
-    [Flags]
-    public enum OwnedGadget
-    {
-        PC = 1,
-        Laptop = 2,
-        Tablet = 4,
-        Phone = 8,
-        iPad = 16,
-        Camera = 32
-    }
 }
