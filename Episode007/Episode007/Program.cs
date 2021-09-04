@@ -224,12 +224,12 @@ namespace Episode007
             #endregion
 
             #region -- Nullable --
-            /*
+            
             string myString = null;
             Nullable<int> myNumber = null;
             int? secondnullableInt = null;
 
-            //"Nullable" is equivalen to "Optional". Meaning, our int varaibles now are optionals 
+            //"Nullable" is equivalen to "Optional". Meaning, our int varaibles are now optionals 
             //version 1
             if(myNumber != null)
             {
@@ -244,7 +244,7 @@ namespace Episode007
             //version 2
             if (myNumber.HasValue || secondnullableInt.HasValue)
                 Console.WriteLine(secondnullableInt.Value);
-            */
+            
             #endregion
 
             #region -- Enumeration (enum) --
