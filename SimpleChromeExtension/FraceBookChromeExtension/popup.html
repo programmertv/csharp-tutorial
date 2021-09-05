@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <h3>Simple Claculator</h3>
+    </nav>
+    <div class="body-content">
+        <div class="container">
+            <div class="content">
+                <div class="row mb-3">
+                    <label>Number 1</label>
+                    <div>
+                        <input id="input1" class="form-control" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label>Number 2</label>
+                    <input id="input2" class="form-control" />
+                </div>
+                <div class="row mb-3">
+                    <label>Operator</label>
+                    <select id="operator" class="form-control">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </div>
+                <div class="row text-center" style="margin-top: 5px">
+                    <button id="btnCalculate" class="btn mt-3 btn-danger">Calculate</button>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="alert alert-success">
+                        <p style="font-size: large">Result: <span id="spanResult"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; 2021 - ProGrammer TV</p>
+        </footer>
+    </div>
+</body>
+</html>

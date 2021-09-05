@@ -1,0 +1,9 @@
+﻿{
+  "name": "Simple calucaltion extension",
+  "description": "This is a simple extenion for ProGrammer TV Demo Only",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
