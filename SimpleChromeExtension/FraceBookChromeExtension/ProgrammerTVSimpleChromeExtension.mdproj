@@ -15,6 +15,7 @@
     <None Include="styles\bootstrap.min.css" />
     <None Include="styles\style.css" />
     <None Include="popup.js" />
+    <None Include="Sample128.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="scripts\" />

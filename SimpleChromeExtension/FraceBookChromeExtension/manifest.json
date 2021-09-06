@@ -3,7 +3,13 @@
   "description": "This is a simple extenion for ProGrammer TV Demo Only",
   "version": "1.0",
   "manifest_version": 3,
+  "icons": {
+    "128": "Sample128.png"
+  },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "Sample128.png"
+    }
   }
 }
