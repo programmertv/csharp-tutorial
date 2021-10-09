@@ -1,0 +1,43 @@
+﻿@using WebNetCoreEpisode001.Models;
+@model IEnumerable<FeaturedViewModel>;
+
+<div class="row">
+    <div class="col-12">
+        <nav>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item active">Home</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-6">
+        <h1 class="display-4 fst-italic">One Piece</h1>
+        <p class="lead my-3">One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 1997, with its individual chapters compiled into 100 tankōbon volumes as of September 2021</p>
+        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Read more...</a></p>
+    </div>
+    <div class="col-6">
+        <img src="@Url.Content("~/images/characters/strawhat.jpg")" class="img-fluid rounded" />
+    </div>
+</div>
+<hr />
+<div class="row mb-3 p-3">
+@foreach (var featured in Model)
+{
+    <div class="col-6 p-3">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">@featured.Header</strong>
+                <h3 class="mb-0">@featured.Title</h3>
+                <div class="mb-1 text-muted">@featured.PostedDate.ToString("MMM dd, yyyy")</div>
+                <p class="card-text mb-auto" style="min-height: 140px; max-height: 140px; overflow-y: hidden">@featured.Description</p>
+                <a href="@Url.Action("Index", "Detail", new {  id = featured.Id })" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="@Url.Content($"~/images/characters/{featured.ImageUrl}")" class="rounded" width="200" height="250" />
+            </div>
+        </div>
+    </div>
+
+}
+</div>

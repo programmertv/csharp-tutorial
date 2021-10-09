@@ -1,0 +1,23 @@
+﻿@using WebNetCoreEpisode001.Models;
+@model IEnumerable<VideoModel>
+<div class="row">
+    <div class="col-12">
+        <nav>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li class="breadcrumb-item active">Videos</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="row">
+    @foreach (var character in Model)
+    {
+        <div class="col-4">
+            <p>@character.Name</p>
+            <div class="ratio ratio-16x9">
+                <iframe src="@character.VideoURL" title="@character.Name" allowfullscreen></iframe>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,34 @@
+﻿@using WebNetCoreEpisode001.Models;
+@model IEnumerable<CharacterModel>
+<div class="row">
+    <div class="col-12">
+        <nav>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li class="breadcrumb-item active">Characters</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="row">
+    @foreach (var character in Model)
+    {
+        <div class="col-4">
+            <div class="card">
+                <img src="@Url.Content($"~/images/characters/{character.Id}.jpeg")" style="max-height: 300px" class="card-img-top" alt="@character.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@character.Name</h5>
+                    <p class="card-text" style="max-height: 100px">@character.Description</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Info #1: </li>
+                    <li class="list-group-item">Info #2: </li>
+                    <li class="list-group-item">Info #3: </li>
+                </ul>
+                <div class="card-footer">
+                    <a href="@Url.Action("Index", "Detail", new { id = character.Id, pageType = "Character" })" class="card-link">Read More</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

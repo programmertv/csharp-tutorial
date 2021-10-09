@@ -1,0 +1,30 @@
+﻿@using WebNetCoreEpisode001.Models;
+@model CharacterModel
+<div class="row">
+    <div class="col-12">
+        <nav>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "Character")">Characters</a></li>
+                <li class="breadcrumb-item active">Details</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="row">
+    @if(Model != null)
+    {
+        <div class="col-4">
+            <img src="@Url.Content($"~/images/characters/{Model.Id}.jpeg")" style="max-height: 300px" alt="@Model.Name">
+        </div>
+        <div class="col-8">
+            <p class="lead">
+                @Html.Raw(Model.Description)
+            </p>
+        </div>
+    }
+    else
+    {
+        <p>Character was not found!</p>
+    }
+</div>
