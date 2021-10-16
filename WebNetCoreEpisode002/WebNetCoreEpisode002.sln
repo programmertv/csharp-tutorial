@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.11
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "WebNetCoreEpisode002", "WebNetCoreEpisode002\WebNetCoreEpisode002.mdproj", "{0CCA6D34-7A64-4CA8-8762-64229406717D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CCA6D34-7A64-4CA8-8762-64229406717D}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{0CCA6D34-7A64-4CA8-8762-64229406717D}.Default|Any CPU.Build.0 = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7D6ADA2-2847-409A-89F8-3564FD668BEE}
+	EndGlobalSection
+EndGlobal
