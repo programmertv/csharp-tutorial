@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HowToCreateWebAPI.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -37,6 +38,9 @@ namespace HowToCreateWebAPI.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] T user)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             _repository.Add(user);
 
             return Ok();
@@ -45,6 +49,9 @@ namespace HowToCreateWebAPI.Controllers
         [HttpPut]
         public IActionResult Update([FromBody] T user)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             _repository.Update(user);
 
             return Ok();
