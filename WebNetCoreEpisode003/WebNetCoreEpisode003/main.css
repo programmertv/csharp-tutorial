@@ -1,0 +1,321 @@
+﻿/*
+body {
+    font-style: italic;
+    font-size: xx-large
+}
+
+p {
+    color: green
+}
+
+h1, h2{
+    color: aqua;
+    font-style: italic
+}
+
+h1.dark{
+    color: black
+}
+
+.light{
+    color: white
+}
+
+#myHeader {
+    color: red;
+}
+*/
+/*
+.main {
+    color: red;
+    font-weight: lighter
+}
+
+div.main{
+    font-weight: bold
+}
+
+.main .second, .main h1{
+    color: yellow
+}
+
+h1 + p {
+    color: chocolate
+}
+
+a:link {
+    color: azure
+}
+
+a:visited{
+    color:grey
+}
+
+a:hover{
+    color:orange
+}
+
+a.test:hover{
+    color:magenta
+}*/
+/*
+button[disabled], input[type=text][readonly]{
+    background-color: white;
+    border: dotted
+}
+
+// presence/exists in class names
+input[class~="c2"]{
+    background-color: green;
+}
+// presence/exists in class names
+input[class|="c1"] {
+    border-color: red;
+}
+//substring matching selector
+a[href="http://frace.com"]{
+    color: white
+}
+a[href$="e.com"], a[href*="tv"] {
+    border: dashed
+}
+a[href^="http"]{
+    background-color: lightblue
+}
+*/
+/*
+h1, p{
+    color: red;
+}
+h1 + p {
+    background-color: yellow
+}
+
+h1 + p + p {
+    background-color: pink;
+    color: green
+}
+
+h1 ~ p{
+    font-size: large;
+    text-decoration: underline
+}*/
+/*
+body > ul.test > li{
+    color: red
+}
+
+.test :first-child{
+    background-color: yellow
+}
+
+.test :last-child{
+    background-color: green
+}
+
+.test :only-child{
+    background-color: orange
+}
+
+li:nth-child(2){
+    background-color: black !important
+}*/
+/*
+ul li:nth-child(odd){
+    background-color: yellow
+}
+
+ul li:nth-child(even) {
+    background-color: red;
+    color: white
+}
+
+ul li {
+    list-style-type: none
+}
+*/
+/*
+.sample{
+    color: white
+}
+p.sample::first-letter {
+    text-transform: uppercase !important
+}
+p.sample::first-line {
+    font-weight: bolder;
+    color: coral
+}
+p.sample::after {
+    content: ".";
+    color: red
+}
+span, span::before{
+    content: "1";
+    color: aqua
+}
+*/
+/*
+.make-inline {
+    display: inline; background-color: red;
+}
+.make-block{
+    display: block; background-color: yellow
+}
+.withSize{
+    display: inline-block; width: 50%;
+    background-color: orange
+}
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: orange
+}
+
+.flexContainer div{
+    flex: 1;
+    border: double;
+    background-color: white;
+    justify-content: space-around
+}
+
+.flexContainer div:nth-child(3){
+    flex: 2;
+    border: double;
+    background-color: white;
+}
+    */
+/*
+div.container {
+    background-color: orange;
+}
+
+#div1 {
+    display: inline-block;
+    height: 100px;
+    background-color: red;
+    border: solid;
+    border-width: 50px;
+    padding: 50px 50px 50px 50px;
+    margin: 50px 50px 50px 50px;
+}
+
+#div2 {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100px;
+    background-color: red;
+    border: solid;
+    border-width: 50px;
+    padding: 50px 50px 50px 50px;
+    margin: 50px 50px 50px 50px;
+}
+    */
+/*
+.roundedBox {
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    background-color: orange;
+    border-radius: 50px;
+    border: 1px dotted;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+}
+
+.roundedBox.otherRadius{
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}*/
+/*
+.sampleDiv{
+    background-color: green;
+}
+@media screen and (max-width: 600px) {
+    body{
+        background-color: orange !important
+    }
+    .sampleDiv {
+        background-color: red
+    }
+}
+    */
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.main > .container {
+    display: inline-block;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px 30px 10px 30px;
+    padding: 30px;
+    background-color: orange;
+    box-shadow: 0 5px 8px 0;
+}
+
+.form-control {
+    display: flex;
+    margin-bottom: 5px
+}
+
+.form-control label {
+    flex: 1;
+    font-weight: bold
+}
+
+.form-control input, .form-control select {
+    flex: 2
+}
+
+#loginBtn, button[type=reset] {
+    float: right;
+    margin-left: 5px;
+    border: 0px;
+    border-radius: 3px 8px 3px 8px;
+    box-shadow: 0 3px 5px 0;
+    padding: 5px;
+    cursor: pointer
+}
+
+button[type=reset] {
+    background-color: red;
+}
+
+#loginBtn {
+    background-color: lightblue;
+}
+
+.logoContainer {
+    text-align: center;
+}
+
+.logoContainer img {
+    width: auto;
+    height: 85px;
+    margin-top: -30px;
+    margin-bottom: -30px
+}
+
+.forgot {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.forgot a {
+    color: blueviolet;
+    font-size: 1.5em;
+}
