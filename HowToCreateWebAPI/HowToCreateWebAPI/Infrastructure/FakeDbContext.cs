@@ -9,7 +9,9 @@ namespace HowToCreateWebAPI.Infrastructure
     {
         public FakeDbContext()
         {
-            Users = new List<User>();
+            Users = new List<User>() {
+                new User{ Id = 1, Email = "frace@test.com", Password = "test" }
+            };
             Heroes = new List<Hero>();
             Positions = new List<Position>();
         }

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HowToCreateWebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class BaseController<T> : Controller
     {
