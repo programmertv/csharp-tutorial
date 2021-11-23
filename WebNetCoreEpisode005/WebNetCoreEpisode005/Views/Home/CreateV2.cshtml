@@ -1,0 +1,68 @@
+﻿@model PersonViewModel
+@{
+    var movies = new[] { "Titanic", "Avatar", "Terminator" };
+}
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <form asp-action="Save" asp-controller="Home" method="post">
+                    <div class="card-header">
+                        <h3>Information</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label asp-for="FirstName"></label>
+                            <input asp-for="FirstName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LastName"></label>
+                            <input asp-for="LastName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Age"></label>
+                            <input asp-for="Age" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FavoriteMovies"></label>
+                            <select asp-for="FavoriteMovies"
+                                    asp-items="movies.Select(s => new SelectListItem(s, s))"
+                                    class="form-control" multiple></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IsVoter"></label>
+                            <input asp-for="IsVoter" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Profession"></label>
+                            <div>
+                                <input type="radio" asp-for="Profession" value="Programmer" /> I am a Programmer
+                                <input type="radio" asp-for="Profession" value="Sea Man" /> I am a Sea Man
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Gender"></label>
+                            <select asp-for="Gender"
+                                    asp-items=" Html.GetEnumSelectList<Gender>()"
+                                    class="form-control"></select>
+                        </div>
+                        <hr />
+                        <h3>Address</h3>
+                        <div class="form-group">
+                            <label asp-for="Address.Brgy"></label>
+                            <input asp-for="Address.Brgy" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address.City"></label>
+                            <input asp-for="Address.City" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="Index" asp-controller="Home">Goto Home</a>
+                        <button type="submit" class="btn btn-primary">Submit Now!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@model PersonViewModel
+<div class="content">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Personal Info</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <partial name="_FullName" />
+                        </div>
+                        <div class="col-12">
+                            <partial name="_Kasarian" model="Model.Gender" />
+                        </div>
+                        <div class="col-12">
+                            <span class="font-weight-bold">Age: </span> @Model.Age
+                        </div>
+                        <div class="col-12">
+                            <span class="font-weight-bold">Profession: </span> @Model.Profession
+                        </div>
+                        <div class="col-12">
+                            <span class="font-weight-bold">Is Voter? : </span> @(Model.IsVoter ? "Yes" : "No")
+                        </div>
+                        <div class="col-12">
+                            <span class="font-weight-bold">Fav Movies: </span> @string.Join(",", Model.FavoriteMovies)
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Address</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <span class="font-weight-bold">Brgy: </span> @Model.Address?.Brgy
+                    </div>
+                    <div class="row">
+                        <span class="font-weight-bold">City: </span> @Model.Address?.City
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

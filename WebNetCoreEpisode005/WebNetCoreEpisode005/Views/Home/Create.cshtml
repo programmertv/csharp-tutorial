@@ -1,0 +1,59 @@
+﻿@model PersonViewModel
+@{
+    var movies = new[] { "Titanic", "Avatar", "Terminator" };
+}
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Information</h3>
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("Save", "Home", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.FirstName)
+                            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.LastName)
+                            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Age)
+                            @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.FavoriteMovies)
+                            @Html.DropDownListFor(
+                                m => m.FavoriteMovies,
+                                movies.Select(s => new SelectListItem(s, s)),
+                                new { @class = "form-control", multiple = "multiple" }
+                            )
+                        </div>
+                        <div class="form-group">
+                            @Html.CheckBoxFor(m => m.IsVoter)
+                            @Html.LabelFor(m => m.IsVoter)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Profession)
+                            <div>
+                                @Html.RadioButtonFor(m => m.Profession, "Programmer") I am a Programmer
+                                @Html.RadioButtonFor(m => m.Profession, "Sea Man") I am a Sea Man
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Gender)
+                            @Html.DropDownListFor(m => m.Gender, Html.GetEnumSelectList<Gender>(), new { @class = "form-control" })
+                        </div>
+                    }
+                </div>
+                <div class="card-footer">
+                    @Html.ActionLink("Goto Home", "Index", "Home")
+                    <button type="submit" class="btn btn-primary">Submit Now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

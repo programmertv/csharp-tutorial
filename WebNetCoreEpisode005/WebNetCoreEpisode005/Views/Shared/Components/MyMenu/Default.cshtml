@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ViewComponents.Menu>
+<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <a class="navbar-brand" asp-action="Index" asp-controller="Home">@ViewData["BrandName"]</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            @foreach (var menu in Model)
+            {
+                <li class="nav-item">
+                    <a class="nav-link"
+                       asp-action="@menu.ActionName"
+                       asp-controller="@menu.ControllerName">@menu.MenuText</a>
+                </li>
+            }
+        </ul>
+    </div>
+</nav>

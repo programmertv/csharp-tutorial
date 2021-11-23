@@ -1,0 +1,68 @@
+﻿@model PersonViewModel
+
+@Model.FirstName
+<br />
+@Model.LastName
+<br />
+****************
+<br />
+@PrintFullName()
+<br />
+********HTML Raw********
+<br />
+@Html.Raw(PrintFullName())
+
+********Partial********
+@Html.PartialAsync("_FullName").Result
+
+********Partial from variable********
+@{
+    var html = await Html.PartialAsync("_FullName");
+    @html
+}
+
+****For gender****
+<p>
+    @(await Html.PartialAsync("_Kasarian", Model.Gender))
+</p>
+
+********Render Partial********
+@{
+    await Html.RenderPartialAsync("_FullName");
+}
+**** Others ***
+<p>
+    @if (Model.Gender == Gender.Male)
+    {
+        //What is your profession?
+        <span>What is your profession?</span>
+        @:What is your profession?
+        <text>
+            Aho!! <br />
+            Aho!!
+        </text>        
+     }
+    @*
+        @Model.LastName@yahoo.com
+        @(Model.LastName)@yahoo.com
+    *@
+    frace@yahoo.com
+    @Model.LastName@@yahoo.com
+    @(Model.LastName)@@yahoo.com
+    <span>@Model.LastName</span><span>@@yahoo.com</span>
+</p>
+
+@functions{
+    string PrintFullName()
+    {
+        return $"{Model.FirstName}<br />{Model.LastName}";
+    }
+}
+
+@section CustomStyles{
+    <link rel="stylesheet" href="@Url.Content("~/css/home.css")" />
+}
+
+@section CustomScripts{
+    <script src="@Url.Content("~/js/home.js")"></script>
+}
