@@ -8,14 +8,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<SchoolDBContext>(options =>
-    options.UseSqlServer(connectionString));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
+        //options.UseSqlServer(connectionString)
+        options.UseInMemoryDatabase("SchoolDB")
+    );
+//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddAutoMapper(typeof(_ForAppServiceAssembyLoadOnly).Assembly);
 builder.Services.AddMediatR(typeof(_ForCoreAssembyLoadOnly).Assembly);
+
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 
 builder.Services.AddControllers()
@@ -29,12 +31,7 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
-
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
-

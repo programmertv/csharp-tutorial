@@ -24,14 +24,13 @@ namespace Frace.CQRS.Core.CommandHandlers
         public async Task<int> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
         {
             var student = _mapper.Map<Student>(request);
-
+            
             return await _studentRepository.Add(student);
         }
 
         public async Task<Unit> Handle(UpdateAgeCommand request, CancellationToken cancellationToken)
         {
             await _studentRepository.UpdateAge(request.Id, request.NewAge);
-
             return new Unit();
         }
 
@@ -43,4 +42,3 @@ namespace Frace.CQRS.Core.CommandHandlers
         }
     }
 }
-

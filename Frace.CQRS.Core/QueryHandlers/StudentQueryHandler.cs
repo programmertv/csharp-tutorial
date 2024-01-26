@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using Frace.CQRS.Core.Commands.Student;
 using Frace.CQRS.Core.Queries.Student;
 using Frace.CQRS.Core.ViewModels;
 using Frace.CQRS.Domain.Contracts;
@@ -42,4 +43,4 @@ namespace Frace.CQRS.Core.QueryHandlers
         }
     }
 }
-
+ 

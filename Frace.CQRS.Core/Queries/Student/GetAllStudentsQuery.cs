@@ -4,8 +4,5 @@ using MediatR;
 
 namespace Frace.CQRS.Core.Queries.Student
 {
-    public class GetAllStudentsQuery : IRequest<IEnumerable<StudentViewModel>>
-    {
-    }
+    public class GetAllStudentsQuery : IRequest<IEnumerable<StudentViewModel>> { }
 }
-

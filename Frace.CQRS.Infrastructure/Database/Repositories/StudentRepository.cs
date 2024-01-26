@@ -26,7 +26,7 @@ namespace Frace.CQRS.Infrastructure.Database.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Student> GetOneById(int id)
+        public async Task<Student?> GetOneById(int id)
         {
             return await _db.Students
                 .Where(t => t.Id == id)
@@ -60,8 +60,6 @@ namespace Frace.CQRS.Infrastructure.Database.Repositories
         private async Task<Entities.Student> FindStudentById(int id)
         {
             var found = await _db.Students.FindAsync(id);
-            if (found == null)
-                throw new NullReferenceException();
 
             return found;
         }
@@ -75,4 +73,3 @@ namespace Frace.CQRS.Infrastructure.Database.Repositories
         }
     }
 }
-
