@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CommandHandlers\" />
+    <None Remove="QueryHandlers\" />
+    <None Remove="Commands\" />
+    <None Remove="Queries\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Commands\Student\" />
+    <None Remove="MediatR" />
+    <None Remove="Queries\Student\" />
+    <None Remove="Queries\Address\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CommandHandlers\" />
+    <Folder Include="QueryHandlers\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Queries\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Commands\Student\" />
+    <Folder Include="Queries\Student\" />
+    <Folder Include="Queries\Address\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Frace.CQRS.Domain\Frace.CQRS.Domain.csproj" />
+    <ProjectReference Include="..\Frace.CQRS.Infrastructure\Frace.CQRS.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+</Project>
